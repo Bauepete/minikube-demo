@@ -3,7 +3,6 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [ push ]
 jobs:
   build_executable:
-    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - name: Login to GitHub Container Registry
@@ -25,4 +24,3 @@ jobs:
           ls -lh target
           cp src/main/docker/Dockerfile ./target/
           docker build --tag ghcr.io/bauepete/backend:latest ./target
-          docker push ghcr.io/bauepete/backend:latest
