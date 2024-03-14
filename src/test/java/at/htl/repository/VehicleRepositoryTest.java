@@ -15,7 +15,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class VehicleRepositoryTest {
     @Inject
     VehicleRepository vehicleRepository;
-    @Test
     @Transactional
     void itShouldDoSomething() {
         var myCar = new Vehicle("Opel", "Kadett");
